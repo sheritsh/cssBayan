@@ -82,11 +82,16 @@ footer {
     background: #1a252f;
 }
 .nav {
+    display: none;
     filter: invert(100%);
     width: 1em;
     height: 1em;
     text-align: center;
     transition: all 0.35s;
+}
+
+.tab-label:hover .nav {
+    display: block;
 }
 
 .tab-content {
@@ -215,6 +220,9 @@ input:checked ~ .tab-content {
         cursor: default;
     }
     .nav {
+        display: none;
+    }
+    .tab-label:hover .nav {
         display: none;
     }
 }
