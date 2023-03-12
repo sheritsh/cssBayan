@@ -1,3 +1,4 @@
+/* Font Face Start */
 /* montserrat-regular - cyrillic_latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -17,8 +18,14 @@
          url('../fonts/montserrat-v25-cyrillic_latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
+/* Font Face End */
+
+
+/* Main Style Start */
+
 .wrapper {
     width: 60%;
+    max-width: 45em;
     margin: 0 auto;
 }
 
@@ -27,7 +34,7 @@ h1 {
 }
 
 body {
-    font-family: 'Montserrat';
+    font-family: Montserrat, sans-serif;
     color: #161D27;
     background: #ecf0f1;
     padding: 0 1em 1em;
@@ -40,33 +47,35 @@ h1 {
 }
 
 input {
-    /* position: absolute; */
     display: none;
-    opacity: 0;
-    z-index: -1;
 }
 
+footer {
+    text-align: center;
+    margin: 5% auto;
+}
 
-/* Accordion styles */
+/* Main Style End */
+
+/* Accordion styles Start */
 .bayan {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.3em 0.3em -0.3em rgba(0, 0, 0, 0.5);
 }
 .tab {
     width: 100%;
     color: white;
     overflow: hidden;
-    border-bottom: 1px solid #42EC99;
+    border-bottom: 0.1em solid #42EC99;
 }
 .tab-label {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1.2em;
     background: #2c3e50;
     font-weight: bold;
     cursor: pointer;
-   /* Icon */
 }
 .tab-label:hover {
     background: #1a252f;
@@ -98,16 +107,72 @@ input {
 }
 input:checked + .tab-label {
     background: #1a252f;
+    border-bottom: 0.2em solid #861AE2;
 }
 input:checked + .tab-label::after {
     transform: rotate(90deg);
+    /* filter: hue-rotate(-140deg); */
 }
 input:checked ~ .tab-content {
     max-height: 100vh;
     padding: 1em;
 }
 
-footer {
-    text-align: center;
-    margin: 5% auto;
+/* Accordion styles End */
+
+/* Images sizes Start */
+
+#my_photo {
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    border-radius: 5%;
 }
+
+#meme_1 {
+    display: block;
+    width: 55%;
+    margin: 1em auto;
+    border-radius: 5%;
+}
+
+#photo_2 {
+    display: block;
+    width: 60%;
+    margin: 0 auto 0.5em;
+    border-radius: 5%;
+}
+
+#meme_2 {
+    display: block;
+    width: 80%;
+    max-height: 25em;
+    margin: 1em auto 0;
+    border-radius: 5%;
+}
+
+#meme_3 {
+    display: block;
+    width: 80%;
+    max-height: 25em;
+    margin: 1em auto 0;
+    border-radius: 5%;
+}
+
+#meme_4 {
+    display: block;
+    width: 80%;
+    max-height: 25em;
+    margin: 1em auto 0;
+    border-radius: 5%;
+}
+
+#meme_5 {
+    display: block;
+    width: 80%;
+    max-height: 25em;
+    margin: 1em auto 0;
+    border-radius: 5%;
+}
+
+/* Images sizes End */
