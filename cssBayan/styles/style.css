@@ -186,17 +186,26 @@ input:checked ~ .tab-content {
     body {
         font-size: 0.8vw;
     }
+    .wrapper {
+        width: 70%;
+    }
   }
 
 @media (max-width: 1180px) {
     body {
         font-size: 1.4vw;
     }
+    .wrapper {
+        width: 80%;
+    }
 }
 
 @media (max-width: 600px) {
     body {
         font-size: 2.5vw;
+    }
+    .wrapper {
+        width: 90%;
     }
 }
 
