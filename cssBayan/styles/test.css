@@ -44,7 +44,6 @@ input {
     background: #2c3e50;
     font-weight: bold;
     cursor: pointer;
-   /* Icon */
 }
 .tab-label:hover {
     background: #1a252f;
