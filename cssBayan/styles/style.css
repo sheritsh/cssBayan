@@ -109,18 +109,16 @@ label {
     cursor: pointer;
 }
 
-input:hover + .tab-label ,input:checked + .tab-label {
+input:checked + .tab-label {
     background: #1a252f;
     border-bottom: 0.2em solid #861AE2;
 }
 
-input:hover + .tab-label .nav ,input:checked + .tab-label .nav {
+input:checked + .tab-label .nav {
     transform: rotate(90deg);
 }
 
-
-
-input:hover ~ .tab-content, input:checked ~ .tab-content {
+input:checked ~ .tab-content {
     max-height: 100vh;
     padding: 1em;
 }
@@ -223,4 +221,22 @@ input:hover ~ .tab-content, input:checked ~ .tab-content {
         display: none;
     }
 }
+
+@media (min-width: 568px) {
+    input:hover + .tab-label {
+        background: #1a252f;
+        border-bottom: 0.2em solid #861AE2;
+    }
+
+    input:hover ~ .tab-content {
+        max-height: 100vh;
+        padding: 1em;
+    }
+
+    input:hover + .tab-label .nav {
+        transform: rotate(90deg);
+    }
+}
+
+
 /* Media queries End */
