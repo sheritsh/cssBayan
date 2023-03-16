@@ -102,7 +102,7 @@ footer {
     color: #2c3e50;
     text-align: center;
     background: white;
-    transition: all 1.35s;
+    transition: all 1s;
 }
 
 label {
@@ -179,6 +179,16 @@ input:checked ~ .tab-content {
     margin: 1em auto 0;
     border-radius: 1em;
 }
+
+@keyframes scale_img {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+    }
+}
+
 /* Images sizes End */
 
 
@@ -236,7 +246,10 @@ input:checked ~ .tab-content {
     input:hover + .tab-label .nav {
         transform: rotate(90deg);
     }
-}
 
+    img:hover {
+        animation: scale_img 1s;
+    }
+}
 
 /* Media queries End */
