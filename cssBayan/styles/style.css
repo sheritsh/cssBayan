@@ -58,7 +58,7 @@ footer {
 
 /* Accordion styles Start */
 .bayan {
-    border-radius: 8px;
+    border-radius: 1em;
     overflow: hidden;
     box-shadow: 0 0.3em 0.3em -0.3em rgba(0, 0, 0, 0.5);
 }
@@ -102,23 +102,25 @@ footer {
     color: #2c3e50;
     text-align: center;
     background: white;
-    transition: all 0.35s;
+    transition: all 1.35s;
 }
 
 label {
     cursor: pointer;
 }
 
-input:checked + .tab-label {
+input:hover + .tab-label ,input:checked + .tab-label {
     background: #1a252f;
     border-bottom: 0.2em solid #861AE2;
 }
 
-input:checked + .tab-label .nav {
+input:hover + .tab-label .nav ,input:checked + .tab-label .nav {
     transform: rotate(90deg);
 }
 
-input:checked ~ .tab-content {
+
+
+input:hover ~ .tab-content, input:checked ~ .tab-content {
     max-height: 100vh;
     padding: 1em;
 }
@@ -126,25 +128,26 @@ input:checked ~ .tab-content {
 
 
 /* Images sizes Start */
+
 #my_photo {
     display: block;
     width: 45%;
     margin: 0 auto;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_1 {
     display: block;
     width: 55%;
     margin: 1em auto;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #photo_2 {
     display: block;
     width: 60%;
     margin: 0 auto 0.5em;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_2 {
@@ -152,7 +155,7 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_3 {
@@ -160,7 +163,7 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_4 {
@@ -168,7 +171,7 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_5 {
@@ -176,7 +179,7 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 /* Images sizes End */
 
