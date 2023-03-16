@@ -17,12 +17,10 @@
     src: url('../fonts/montserrat-v25-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
          url('../fonts/montserrat-v25-cyrillic_latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-
 /* Font Face End */
 
 
 /* Main Style Start */
-
 .wrapper {
     width: 60%;
     max-width: 45em;
@@ -55,21 +53,23 @@ footer {
     text-align: center;
     margin: 5% auto;
 }
-
 /* Main Style End */
+
 
 /* Accordion styles Start */
 .bayan {
-    border-radius: 8px;
+    border-radius: 1em;
     overflow: hidden;
     box-shadow: 0 0.3em 0.3em -0.3em rgba(0, 0, 0, 0.5);
 }
+
 .tab {
     width: 100%;
     color: white;
     overflow: hidden;
     border-bottom: 0.1em solid #42EC99;
 }
+
 .tab-label {
     display: flex;
     justify-content: space-between;
@@ -78,9 +78,11 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
 .tab-label:hover {
     background: #1a252f;
 }
+
 .nav {
     display: none;
     filter: invert(100%);
@@ -100,7 +102,7 @@ footer {
     color: #2c3e50;
     text-align: center;
     background: white;
-    transition: all 0.35s;
+    transition: all 1s;
 }
 
 label {
@@ -111,15 +113,17 @@ input:checked + .tab-label {
     background: #1a252f;
     border-bottom: 0.2em solid #861AE2;
 }
+
 input:checked + .tab-label .nav {
     transform: rotate(90deg);
 }
+
 input:checked ~ .tab-content {
     max-height: 100vh;
     padding: 1em;
 }
-
 /* Accordion styles End */
+
 
 /* Images sizes Start */
 
@@ -127,21 +131,21 @@ input:checked ~ .tab-content {
     display: block;
     width: 45%;
     margin: 0 auto;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_1 {
     display: block;
     width: 55%;
     margin: 1em auto;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #photo_2 {
     display: block;
     width: 60%;
     margin: 0 auto 0.5em;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_2 {
@@ -149,7 +153,7 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_3 {
@@ -157,7 +161,7 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_4 {
@@ -165,7 +169,7 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
 }
 
 #meme_5 {
@@ -173,15 +177,22 @@ input:checked ~ .tab-content {
     width: 80%;
     max-height: 25em;
     margin: 1em auto 0;
-    border-radius: 5%;
+    border-radius: 1em;
+}
+
+@keyframes scale_img {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+    }
 }
 
 /* Images sizes End */
 
 
-
 /* Media queries Start */
-
 @media (max-width: 1920px) {
     body {
         font-size: 0.8vw;
@@ -218,6 +229,26 @@ input:checked ~ .tab-content {
     }
     .bayan:hover .nav {
         display: none;
+    }
+}
+
+@media (min-width: 568px) {
+    input:hover + .tab-label {
+        background: #1a252f;
+        border-bottom: 0.2em solid #861AE2;
+    }
+
+    input:hover ~ .tab-content {
+        max-height: 100vh;
+        padding: 1em;
+    }
+
+    input:hover + .tab-label .nav {
+        transform: rotate(90deg);
+    }
+
+    img:hover {
+        animation: scale_img 1s;
     }
 }
 
